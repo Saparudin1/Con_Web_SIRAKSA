@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mojang Jajaka Sumedang</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfaf5;
+      color: #333;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 300px;
+      background: url('mojang_jajaka_sumedang.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero h1 {
+      position: relative;
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section p {
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      text-align: justify;
+    }
+
+    /* Grid untuk card */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+      padding-bottom: 15px;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+      color: #5a3e2b;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #5a3e2b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      width: fit-content;
+      background: #5a3e2b;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #5a3e2b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Mojang Jajaka Sumedang</h1>
+  </div>
+
+  <!-- Tentang Mojang Jajaka -->
+  <section>
+    <h2>Apa itu Mojang Jajaka?</h2>
+    <p>
+      Mojang Jajaka Sumedang adalah duta budaya, pariwisata, dan ekonomi kreatif yang berperan 
+      memperkenalkan kekayaan lokal Kabupaten Sumedang. Mereka menjadi simbol pemuda-pemudi inspiratif 
+      yang mengedepankan nilai <i>Insun Medal Insun Madangan</i> sebagai filosofi utama.
+    </p>
+  </section>
+
+  <!-- Grid Profil atau Kegiatan -->
+  <section>
+    <h2>Kegiatan & Profil Mojang Jajaka</h2>
+    <div class="grid">
+
+      <div class="card">
+        <img src="assets/Logo Moka Sumedang.jpg" alt="Mojang Sumedang">
+        <h3>Mojang Sumedang</h3>
+        <a href="detail_mojang.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/Logo Moka Sumedang.jpg" alt="Jajaka Sumedang">
+        <h3>Jajaka Sumedang</h3>
+        <a href="detail_jajaka.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/Logo Moka Sumedang.jpg" alt="Kegiatan Mojang Jajaka">
+        <h3>Kegiatan Budaya</h3>
+        <a href="detail_kegiatan.html">Selengkapnya ➡</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tombol kembali ke beranda -->
+  <a href="index.html" class="back-btn">⬅ Kembali ke Beranda</a>
+
+  <!-- Musik otomatis play -->
+  <audio autoplay loop>
+    <source src="audio/Mojang Jajaka Jawa Barat - Intan Ayu.m4a" type="audio/mp3">
+  </audio>
+
+  <footer>
+    &copy; Saparudin 2025
+  </footer>
+
+</body>
+</html>

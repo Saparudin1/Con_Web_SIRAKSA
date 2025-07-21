@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pariwisata & Ekonomi Kreatif Sumedang</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfaf5;
+      color: #333;
+    }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      height: 300px;
+      background: url('pariwisata_sumedang.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero h1 {
+      position: relative;
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #5a3e2b;
+    }
+
+    /* Grid card */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 8px 12px;
+      background: #5a3e2b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      width: fit-content;
+      background: #5a3e2b;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #5a3e2b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Pariwisata & Ekonomi Kreatif</h1>
+  </div>
+
+  <!-- Destinasi Wisata -->
+  <section>
+    <h2>Destinasi Wisata Sumedang</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/JATIGEDE.jpg" alt="Bendungan Jatigede">
+        <h3>Bendungan Jatigede</h3>
+        <a href="detail_jatigede.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/TARAWANGSA.jpeg" alt="Bukit Toga">
+        <h3>Bukit Toga</h3>
+        <a href="detail_bukit_toga.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/TOGA HILS.jpg" alt="Gunung Tampomas">
+        <h3>Gunung Tampomas</h3>
+        <a href="detail_tampomas.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/TOGA HILS.jpg" alt="Kampung Toga">
+        <h3>Kampung Toga</h3>
+        <a href="detail_kampung_toga.html">Selengkapnya ➡</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ekonomi Kreatif -->
+  <section>
+    <h2>Produk Ekonomi Kreatif</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/TAHU BUNGKENG.jpg" alt="Tahu Sumedang">
+        <h3>Tahu Sumedang</h3>
+        <a href="detail_tahu_sumedang.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/NAFIRA BATIK.jpg" alt="Batik Sumedang">
+        <h3>Batik Sumedang</h3>
+        <a href="detail_batik_sumedang.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/NAFIRA BATIK.jpg" alt="Kopi Sumedang">
+        <h3>Kopi Sumedang</h3>
+        <a href="detail_kopi_sumedang.html">Selengkapnya ➡</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/NAFIRA BATIK.jpg" alt="Souvenir Kreatif">
+        <h3>Souvenir Kreatif</h3>
+        <a href="detail_souvenir.html">Selengkapnya ➡</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tombol kembali ke beranda -->
+  <a href="index.html" class="back-btn">⬅ Kembali ke Beranda</a>
+
+  <!-- Musik otomatis play -->
+  <audio autoplay loop>
+    <source src="audio/Mojang Jajaka Jawa Barat - Intan Ayu.m4a" type="audio/mp3">
+  </audio>
+
+  <footer>
+    &copy; Saparudin 2025
+  </footer>
+
+</body>
+</html>

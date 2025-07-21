@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mojang Jajaka Sumedang</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfaf5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('assets/lingga\ 1.jpg') center/cover no-repeat; /* 👉 GANTI BACKGROUND DI SINI */
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header img {
+      width: 80px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-top: 20px;
+    }
+    header p {
+      font-size: 1rem;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: rgba(90, 62, 43, 0.95);
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    /* SECTION UTAMA */
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #5a3e2b;
+      margin-bottom: 30px;
+    }
+
+    /* CARD CONTAINER */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      text-align: center;
+      padding: 20px;
+
+      /* animasi awal: transparan & turun sedikit */
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    /* saat terlihat */
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #5a3e2b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #5a3e2b;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* Tombol musik */
+    .music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #5a3e2b;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ BACKGROUND MUSIC -->
+  <!-- 👉 GANTI NAMA FILE MP3 DI SINI -->
+  <!-- Contoh: kalau file musikmu namanya kacapi_suling.mp3, ganti bagian src="lagu_sumedang.mp3" jadi src="kacapi_suling.mp3" -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/Mojang Jajaka Jawa Barat - Intan Ayu.m4a" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" onclick="toggleMusic()">⏸ Musik</button>
+
+  <!-- HEADER -->
+  <header>
+    <!-- Logo Kabupaten Sumedang -->
+
+    <h1>RAKSA BUDAYA</h1>
+    <p>Mojang Jajaka Sumedang | Budaya & Pariwisata Berkelanjutan</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="#sejarah">Sejarah & Budaya</a>
+    <a href="#pariwisata">Pariwisata & Ekonomi Kreatif</a>
+    <a href="#mojang">Mojang Jajaka</a>
+  </nav>
+
+  <!-- SECTION UTAMA -->
+  <section>
+    <h2>Selamat Datang di Raksa Budaya</h2>
+    <p style="text-align:center;">
+      Dibuat untuk memperkenalkan budaya, sejarah, dan potensi pariwisata Kabupaten Sumedang 
+      sebagai bagian dari komitmen menjaga warisan leluhur dan mengembangkan ekonomi kreatif berkelanjutan.
+    </p>
+    
+    <div class="card-container">
+
+      <!-- CARD SEJARAH -->
+      <div class="card" id="sejarah">
+        <img src="assets/Logo Lingga.jpg" alt="Sejarah Sumedang"> <!-- 👉 GANTI FOTO SEJARAH -->
+        <h3>Sejarah & Budaya</h3>
+        <p>Mengenal Prabu Geusan Ulun, kerajaan Sumedang Larang, serta seni dan tradisi khas.</p>
+        <a href="sejarah.html">Selengkapnya →</a>
+      </div>
+
+      <!-- CARD PARIWISATA -->
+      <div class="card" id="pariwisata">
+        <img src="assets/Logo Kujang Sapasang.jpg" alt="Wisata Sumedang"> <!-- 👉 GANTI FOTO PARIWISATA -->
+        <h3>Pariwisata & Ekraf</h3>
+        <p>Temukan destinasi wisata dan produk ekonomi kreatif asli Sumedang.</p>
+        <a href="pariwisata.html">Selengkapnya →</a>
+      </div>
+
+      <!-- CARD MOJANG -->
+      <div class="card" id="mojang">
+        <img src="assets/Logo Moka Sumedang.jpg" alt="Mojang Jajaka"> <!-- 👉 GANTI FOTO MOJANG -->
+        <h3>Mojang Jajaka</h3>
+        <p>Simbol generasi muda yang melestarikan budaya dan memajukan daerah.</p>
+        <a href="mojangjajaka.html">Selengkapnya →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; Saparudin 2025
+  </footer>
+
+  <script>
+    // ✅ Fungsi toggle musik
+    const music = document.getElementById('bgMusic');
+    const btn = document.querySelector('.music-btn');
+    function toggleMusic(){
+      if(music.paused){
+        music.play();
+        btn.textContent = '⏸ Musik';
+      } else {
+        music.pause();
+        btn.textContent = '▶ Musik';
+      }
+    }
+
+    // ✅ Animasi saat card terlihat di layar
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 }); // muncul kalau 20% terlihat
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
